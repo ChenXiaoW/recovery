@@ -4,7 +4,6 @@ import com.example.recovery.service.ISysUserService;
 import com.example.recovery.vo.PasswordLogin;
 import com.example.recovery.vo.Response;
 import io.swagger.annotations.Api;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
