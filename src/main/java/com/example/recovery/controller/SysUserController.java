@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.recovery.vo.Response;
 import com.example.recovery.vo.SysUserPageQuery;
 import com.example.recovery.vo.SysUserVO;
+import com.example.recovery.vo.UpdatePasswordVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -45,6 +46,13 @@ public class SysUserController {
     @PreAuthorize("hasAnyRole('ADMIN')")
     @PutMapping("/state/{id}")
     Response<SysUserVO> updateState(@PathVariable("id")Integer id,@RequestParam("state")Boolean state){
+        return Response.success();
+    }
+
+    @ApiOperation("修改密码")
+    @ApiImplicitParam(name = "id",value = "用户ID")
+    @PutMapping("/password/{id}")
+    Response updatePassword(@PathVariable("id")Integer id,@RequestBody UpdatePasswordVO vo){
         return Response.success();
     }
 }
