@@ -20,3 +20,6 @@ jwt:
   secret: recovery2023
   expiration:
   tokenHeader: token
+file:
+  path: ./images/
+  urlPrefix: http://127.0.0.1:${server.port}

@@ -1,11 +1,9 @@
 package com.example.recovery.controller;
 
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.recovery.pojo.Category;
 import com.example.recovery.pojo.UserAddress;
-import com.example.recovery.vo.CategoryPageQuery;
 import com.example.recovery.vo.Response;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +18,7 @@ import java.util.List;
  * @author 
  * @since 2023-04-22
  */
+@Api(tags = "用户地址管理")
 @RestController
 @RequestMapping("/userAddress")
 public class UserAddressController {

@@ -1,10 +1,7 @@
 package com.example.recovery.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.recovery.vo.Response;
-import com.example.recovery.vo.SysUserPageQuery;
-import com.example.recovery.vo.SysUserVO;
-import com.example.recovery.vo.UpdatePasswordVO;
+import com.example.recovery.vo.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -41,6 +38,15 @@ public class SysUserController {
     Response<SysUserVO> queryUserInfo(@PathVariable("id")Integer id){
         return Response.success();
     }
+
+    @ApiOperation("更新用户信息")
+    @ApiImplicitParam(name = "id",value = "用户ID")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
+    @PutMapping("/{id}")
+    Response<Boolean> updateUserInfo(@PathVariable("id")Integer id,@RequestBody InsertOrUpdateUserInfoVO vo){
+        return Response.success();
+    }
+
     @ApiOperation("禁用/启用用户")
     @ApiImplicitParam(name = "id",value = "用户ID")
     @PreAuthorize("hasAnyRole('ADMIN')")

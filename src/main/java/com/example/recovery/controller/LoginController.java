@@ -4,6 +4,7 @@ import com.example.recovery.service.ISysUserService;
 import com.example.recovery.vo.PasswordLogin;
 import com.example.recovery.vo.Response;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -29,6 +30,7 @@ public class LoginController {
      * @param
      * @return
      */
+    @ApiOperation("密码登录")
     @PostMapping("/passwordLogin")
     Response passwordLogin(@Valid @RequestBody PasswordLogin passwordLogin){
         return Response.success(sysUserService.passwordLogin(passwordLogin));
