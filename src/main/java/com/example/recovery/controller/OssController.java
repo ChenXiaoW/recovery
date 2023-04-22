@@ -44,7 +44,7 @@ public class OssController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return Response.success(uuid + "_" + file.getOriginalFilename());
+        return Response.success("/oss/images/"+uuid + "_" + file.getOriginalFilename());
     }
 
 

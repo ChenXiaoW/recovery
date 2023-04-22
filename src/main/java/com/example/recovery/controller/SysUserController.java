@@ -34,17 +34,17 @@ public class SysUserController {
         return Response.success();
     }
     @ApiOperation("查询用户信息")
-    @ApiImplicitParam(name = "userId",value = "用户ID")
+    @ApiImplicitParam(name = "id",value = "用户ID")
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
-    @GetMapping("/{userId}")
-    Response<SysUserVO> queryUserInfo(@PathVariable("userId")Integer userId){
+    @GetMapping("/{id}")
+    Response<SysUserVO> queryUserInfo(@PathVariable("id")Integer id){
         return Response.success();
     }
     @ApiOperation("禁用/启用用户")
-    @ApiImplicitParam(name = "userId",value = "用户ID")
+    @ApiImplicitParam(name = "id",value = "用户ID")
     @PreAuthorize("hasAnyRole('ADMIN')")
-    @PutMapping("/{userId}")
-    Response<SysUserVO> updateUserState(@PathVariable("userId")Integer userId,@RequestParam("state")Boolean state){
+    @PutMapping("/state/{id}")
+    Response<SysUserVO> updateState(@PathVariable("id")Integer id,@RequestParam("state")Boolean state){
         return Response.success();
     }
 }
