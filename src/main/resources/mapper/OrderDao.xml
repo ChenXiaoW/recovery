@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.recovery.mapper.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.recovery.pojo.Order">
+        <id column="id" property="id" />
+        <result column="purchaser_id" property="purchaserId" />
+        <result column="contact_mobile" property="contactMobile" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="area" property="area" />
+        <result column="address" property="address" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="pick_up_time" property="pickUpTime" />
+        <result column="estimate_weight" property="estimateWeight" />
+        <result column="state" property="state" />
+        <result column="finish_time" property="finishTime" />
+        <result column="create_by" property="createBy" />
+        <result column="update_by" property="updateBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, purchaser_id, contact_mobile, province, city, area, address, longitude, latitude, pick_up_time, estimate_weight, state, finish_time, create_by, update_by, create_time, update_time, del_flag
+    </sql>
+
+</mapper>
